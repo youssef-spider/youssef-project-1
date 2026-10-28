@@ -1,0 +1,381 @@
+/* الإعدادات العامة */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    background: #f7f5ff;
+    color: #25213a;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* شريط التنقل */
+
+header {
+    background: white;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 5%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #673de6;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #673de6;
+}
+
+/* القسم الرئيسي */
+
+.hero {
+    max-width: 1200px;
+    margin: auto;
+    padding: 90px 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.badge {
+    display: inline-block;
+    background: #e8dfff;
+    color: #673de6;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero-text h1 {
+    font-size: clamp(32px, 4vw, 55px);
+    color: #673de6;
+    margin-bottom: 15px;
+}
+
+.hero-text h2 {
+    font-size: clamp(20px, 2.5vw, 30px);
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 35px;
+}
+
+/* زر الطلب */
+
+.order-btn {
+    display: inline-block;
+    background: #673de6;
+    color: white;
+
+    padding: 15px 35px;
+    border-radius: 15px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    box-shadow: 0 8px 20px rgba(103,61,230,0.2);
+
+    transition: 0.3s;
+}
+
+.order-btn:hover {
+    background: #5128c9;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(103,61,230,0.3);
+}
+
+.order-btn:active {
+    transform: scale(0.97);
+}
+
+/* صورة البطاقة */
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    object-fit: contain;
+
+    filter: drop-shadow(0 20px 25px rgba(0,0,0,0.12));
+
+    transition: 0.5s;
+}
+
+.hero-image img:hover {
+    transform: translateY(-10px) rotate(2deg);
+}
+
+/* المميزات */
+
+.features {
+    padding: 80px 5%;
+    background: white;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: clamp(25px, 3vw, 36px);
+    color: #673de6;
+    margin-bottom: 45px;
+}
+
+.features-container {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* كروت المميزات */
+
+.feature-card {
+    background: #f7f5ff;
+    padding: 35px 25px;
+
+    border-radius: 20px;
+    border: 1px solid #eee8ff;
+
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(103,61,230,0.1);
+    border-color: #673de6;
+}
+
+.feature-card span {
+    font-size: 40px;
+}
+
+.feature-card h3 {
+    margin: 15px 0 10px;
+    font-size: 21px;
+    color: #673de6;
+}
+
+.feature-card p {
+    color: #666;
+    font-size: 15px;
+}
+
+/* الفوتر */
+
+footer {
+    background: #21183d;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    font-size: 14px;
+}
+
+/* ======================= */
+/* شاشات التابلت */
+/* ======================= */
+
+@media (max-width: 992px) {
+
+    .hero {
+        gap: 30px;
+        padding: 65px 5%;
+    }
+
+    .features-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-image img {
+        max-width: 350px;
+    }
+
+}
+
+/* ======================= */
+/* شاشات الموبايل */
+/* ======================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 6%;
+        gap: 35px;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 35px;
+    }
+
+    .hero-text h2 {
+        font-size: 22px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-image img {
+        width: 85%;
+        max-width: 350px;
+    }
+
+    .order-btn {
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
+    }
+
+    .features {
+        padding: 55px 6%;
+    }
+
+    .features-container {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .feature-card {
+        padding: 25px 20px;
+    }
+
+}
+
+/* ======================= */
+/* الموبايلات الصغيرة */
+/* ======================= */
+
+@media (max-width: 380px) {
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .hero-text h1 {
+        font-size: 29px;
+    }
+
+    .hero-text h2 {
+        font-size: 19px;
+    }
+
+    .hero-image img {
+        width: 95%;
+    }
+
+    .order-btn {
+        padding: 13px 20px;
+        font-size: 16px;
+    }
+
+}
+
+/* تحسين الوصول بلوحة المفاتيح */
+
+a:focus-visible {
+    outline: 3px solid #673de6;
+    outline-offset: 4px;
+}
+
+/* تقليل الحركة لمن يفضلون ذلك */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        animation: none !important;
+    }
+
+}
